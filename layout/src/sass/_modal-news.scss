@@ -1,0 +1,166 @@
+.wrapper-modal-news {
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+
+  .box-content {
+    display: flex;
+    width: 848px;
+    height: 531px;
+    background: $sec-color;
+    position: relative;
+
+    @media (max-width: 890px) {
+      width: 298px;
+      height: auto;
+      padding: 44px 20px 24px;
+      box-sizing: border-box;
+    }
+
+    .btn-close {
+      position: absolute;
+      right: 0;
+      font-family: $Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $sec-color;
+      top: -24px;
+      cursor: pointer;
+    }
+
+    figure {
+      @media (max-width: 890px) {
+        display: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .box-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      justify-content: center;
+
+      @media (max-width: 890px) {
+        max-width: 100%;
+      }
+
+      .icon-cart {
+        display: inline-block;
+        background-image: url($iconCarta);
+        width: 28px;
+        height: 30px;
+      }
+
+      p {
+        &:nth-of-type(1) {
+          margin-bottom: 12px;
+          margin-top: 17px;
+          color: $gray3;
+          text-transform: uppercase;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 20px;
+        }
+
+        &:nth-of-type(2) {
+          width: 260px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 23px;
+          color: $gray2;
+          text-align: center;
+
+          @media (max-width: 890px) {
+            font-size: 16px;
+            width: 226px;
+          }
+
+
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+
+      .box-field {
+        width: 322px;
+        max-width: 100%;
+
+        input {
+          width: 322px;
+          height: 40px;
+          margin-bottom: 12.5px;
+          border: 1px solid $gray;
+          box-sizing: border-box;
+          border-radius: 10px;
+          padding: 0 13px;
+          margin-top: 25px;
+
+          @media (max-width: 890px) {
+            width: 258px;
+            border-radius: 6px;
+          }
+
+          &:focus {
+            outline: 0;
+          }
+        }
+
+        .btn-enviar {
+          width: 322px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          background: $main-color;
+          border-radius: 10px;
+          color: $sec-color;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 20px;
+          text-transform: uppercase;
+          letter-spacing: 0.8px;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: $main-color-hover;
+          }
+
+          @media (max-width: 890px) {
+            width: 258px;
+          }
+
+          &:after {
+            content: "";
+            background-image: url($iconSend);
+            width: 13px;
+            height: 13px;
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+}

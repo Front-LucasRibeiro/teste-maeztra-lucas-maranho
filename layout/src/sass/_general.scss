@@ -1,0 +1,109 @@
+* {
+  font-family: $Titillium;
+}
+
+.wrapper-content {
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+}
+
+ul{
+  &:focus{
+    outline: 0;
+    border: 0;
+  }
+}
+
+.slick-dots {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  margin-bottom: 24px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 16px;
+  }
+
+  li {
+    button {
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      border: 0;
+      font-size: 0;
+      margin-right: 16px;
+      border: 2px solid $main-color;
+      background-color: transparent;
+      cursor: pointer;
+
+      @media (max-width: 480px) {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    &.slick-active {
+      button {
+        background-color: $main-color;
+      }
+    }
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  font-size: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.slick-next {
+  right: 8%;
+  background-image: url($arrowSlick);
+  width: 20px;
+  height: 32px;
+  transform: rotate(180deg);
+
+  @media (max-width: 767px) {
+    right: 3%;
+  }
+}
+
+.slick-prev {
+  left: 8%;
+  background-image: url($arrowSlick);
+  width: 20px;
+  height: 32px;
+
+  @media (max-width: 767px) {
+    left: 3%;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: $text-color;
+}
+::-moz-placeholder {
+  color: $text-color;
+}

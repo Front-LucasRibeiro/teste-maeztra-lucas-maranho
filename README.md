@@ -1,3 +1,11 @@
+# Compilar projeto
+npm install
+npm start
+
+## Ambiente:
+Projeto sendo executado na versão 16.17.0 do Node, em caso de problemas ao compilar o projeto use nvm para alterar a versão do node.
+
+
 
 # Desafio Maeztra
 Olá candidato,
